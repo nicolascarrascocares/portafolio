@@ -3,4 +3,15 @@
     color: white
 }
 
+.img-principal{
+    background-image: url(/Prueba/assets/img/bg_hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding-bottom: 50rem;
+}
 
+hr{
+    background-color: white;
+    width: 25rem;
+}
