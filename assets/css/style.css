@@ -1,3 +1,7 @@
+body{
+ font-family: 'Open Sans', sans-serif; 
+}
+
 .navbar{
     background-color: #660066;
     color: white
@@ -14,4 +18,13 @@
 hr{
     background-color: white;
     width: 25rem;
+}
+
+.seccion-trabajos{
+    background-color: #660066;
+    color: white;
+}
+
+.card-title{
+    font-weight: bold;
 }
