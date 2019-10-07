@@ -2,11 +2,6 @@ body{
  font-family: 'Open Sans', sans-serif; 
 }
 
-.navbar{
-    background-color: #660066;
-    color: white
-}
-
 .img-principal{
     background-image: url(/Prueba/assets/img/bg_hero.png);
     background-repeat: no-repeat;
@@ -20,11 +15,10 @@ hr{
     width: 25rem;
 }
 
-.seccion-trabajos{
-    background-color: #660066;
-    color: white;
-}
-
 .card-title{
     font-weight: bold;
+}
+
+.color-fondo{
+    background-color: #660066;
 }
