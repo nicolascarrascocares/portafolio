@@ -22,3 +22,12 @@ hr{
 .color-fondo{
     background-color: #660066;
 }
+
+footer h1{
+    font-family: 'Oswald',sans-serif;
+}
+.fab{
+    font-size: 60px;
+    margin-left: 25px;
+    color: #ffffff;
+}
