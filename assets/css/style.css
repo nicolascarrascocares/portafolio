@@ -2,6 +2,11 @@ body{
  font-family: 'Open Sans', sans-serif; 
 }
 
+.logo{
+ font-family: 'Calligraffitti', cursive;  
+    font-weight:600;
+}
+
 hr{
     background-color: white;
     width: 20rem;
@@ -20,6 +25,12 @@ footer h1{
 }
 .fab{
     font-size: 60px;
+    margin-left: 25px;
+    color: #ffffff;
+}
+.whatsapp{
+    margin-top: 10px;
+    font-size: 40px;
     margin-left: 25px;
     color: #ffffff;
 }
