@@ -1,182 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!--Meta para programar el ancho de la página de manera automatica-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pagina">
-    <meta name="author" content="Nicolas Carrasco">
-    <meta name="keywords" content="pagina, Nicolas Carrasco, primera, trabajos"> 
-    <!--Link para utilizar los atributos de Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!--Google font-->
-    <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:400,600&display=swap" rel="stylesheet">
-    <!--
-            font-family: 'Open Sans', sans-serif;
-            font-family: 'Calligraffitti', cursive;
-    -->
-    <!--Link a nuestra hoja de estilo-->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <!--fontawesone-->
-     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymus">
-     <!--etiqueta en la pestaña de la pagina-->
-     <link rel="shortcut icon" type = "image/png" href="./assets/img/favicon.png">
-    <title>Landing Page</title>
-</head>
-<body>
-   <!--Creacion del nav-->
+    <head>
+        <meta charset="UTF-8">
+        <!--Meta para programar el ancho de la página de manera automatica-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Pagina">
+        <meta name="author" content="Nicolas Carrasco">
+        <meta name="keywords" content="pagina, Nicolas Carrasco, primera, trabajos"> 
+        <!--Link para utilizar los atributos de Bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--Google font-->
+        <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:400,600&display=swap" rel="stylesheet">
+        <!--
+font-family: 'Open Sans', sans-serif;
+font-family: 'Calligraffitti', cursive;
+-->
+        <!--Link a nuestra hoja de estilo-->
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!--fontawesone-->
+        <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymus">
+        <!--etiqueta en la pestaña de la pagina-->
+        <link rel="shortcut icon" type = "image/png" href="./assets/img/favicon.png">
+        <title>Landing Page</title>
+    </head>
+    <body>
+        <!--Creacion del nav-->
         <nav class="navbar navbar-expand-md navbar-dark color-fondo fixed-top">
-         <div class="container">
-          <a class="navbar-brand" href="#imagen"><h2 class="logo">NC</h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a href="#sobre-mi" class="nav-link text-white d-none d-lg-block">Sobre mí</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#exp">Experiencia</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#mis-trabajos">Trabajos</a>
-              </li> 
-               <li class="nav-item">
-                <a class="nav-link text-white" href="#contacto">Contacto</a>
-              </li>    
-            </ul>
-          </div>
-          </div>  
+            <div class="container">
+                <a class="navbar-brand" href="#imagen"><h2 class="logo">NC</h2></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#sobre-mi" class="nav-link text-white d-none d-lg-block">Sobre mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#exp">Experiencia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#mis-trabajos">Trabajos</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contacto">Contacto</a>
+                        </li>    
+                    </ul>
+                </div>
+            </div>  
         </nav>
-    <!--Seccion de imagen-->
-      <header class="hero text-light text-right py-5 my-2 img-fluid">
-      <img id="imagen" src="./assets/img/mi-foto-2.jpeg" class="foto img-fluid" style="width: 100%;" alt="Responsive image">
-      </header>
-    <!--Seccion de experiencia-->   
-<section id="sobre-mi" class="container text-justify d-none d-lg-block">
-  <div class="d-md-block">
-      <div class="col-12">
-        <h3 class="text-center font-weight-bold">PRESENTACION</h3>
-          <hr>
-     </div>
-     <div class="row my-5">
-      <div class="col-6">
-           <p class="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis ante nulla. Donec in neque consectetur, ultrices justo eu, hendrerit lectus. Nullam fermentum turpis et dolor euismod consequat sed sed ante. Curabitur vel lacinia nisi. Sed mollis condimentum rhoncus. Proin sed diam eu risus auctor aliquet. Sed nisi lorem, mollis sit amet gravida in, finibus ut diam. Nunc cursus lacus ex, id interdum nibh tristique ac. Maecenas in mi blandit, euismod ipsum eu, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem eu massa pellentesque, id interdum nibh luctus. Nam ac orci id neque posuere aliquam.
-          </p>
-      </div>
-      <div class="col-6">
-          <p class="font-weight-normal">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis ante nulla. Donec in neque consectetur, ultrices justo eu, hendrerit lectus. Nullam fermentum turpis et dolor euismod consequat sed sed ante. Curabitur vel lacinia nisi. Sed mollis condimentum rhoncus. Proin sed diam eu risus auctor aliquet. Sed nisi lorem, mollis sit amet gravida in, finibus ut diam. Nunc cursus lacus ex, id interdum nibh tristique ac. Maecenas in mi blandit, euismod ipsum eu, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem eu massa pellentesque, id interdum nibh luctus. Nam ac orci id neque posuere aliquam.
-          </p>
-      </div>
-    </div> 
-   </div>
-    </section>
-    <!--Seccion de mi experiencía-->
-    <section id="exp" class="container my-5">
-     <div class="col-12 text-center">
-        <h3 class="font-weight-bold">MI EXPERIENCIA</h3>
-          <hr>
-     </div>
-    <div class="row">
-        <div class="col-6">
-            <img src="./assets/img/winpack.png" alt="" class="rounded mx-auto d-none d-lg-block" data-toggle="tooltip" data-placement="top" title="Empresa con mas de 15 años en el mercado, tiempo en el cual nos hemos convertido en líderes en la entrega de elementos de embalaje, principalmente en la fabricación de Film Stretch.">
-            <p class="text-justify font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nostrum nihil maxime consequatur, excepturi nemo iste facilis repellat consequuntur deserunt accusantium repudiandae rem quam accusamus, ut minima voluptatem est ipsa.</p>
-        </div>
-        <div class="col-6">
-            <img src="./assets/img/ARTECOLA.png" alt="" class="rounded mx-auto d-none d-lg-block" data-toggle="tooltip" title="Artecola Química es hoy una de las más innovadoras empresas productoras de adhesivos industriales, laminados especiales y suministros para calzados de América Latina." data-placement="right" data-content="">
-            <p class="text-justify font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat explicabo laudantium id ullam cupiditate vel asperiores nobis voluptas accusamus, officiis pariatur similique consectetur assumenda est, velit itaque sint voluptatem hic!</p>
-        </div>
-    </div>
-    </section>
-    <!--Seccion de mis tarbajos como desarrollador-->
-    <section id="mis-trabajos" class="color-fondo p-5 text-white">
-        <div class="text-center">
-            <h1 class="font-weight-bold">MIS ÚLTIMOS TRABAJOS</h1>
-            <hr style="color: white; width: 100px;">
-        </div>
-        <div class="container text-dark ">
-        <div class="card-deck row">
-          <div class="card col-md-4">
-            <img src="./assets/img/meet_coffee.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Meet&Coffe</h5>
-              <p class="card-text font-weight-normal">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <!--Seccion de imagen-->
+        <header class="hero text-light text-right py-5 my-2 img-fluid">
+            <img id="imagen" src="./assets/img/mi-foto-2.jpeg" class="foto img-fluid" style="width: 100%;" alt="Responsive image">
+        </header>
+        <!--Seccion de experiencia-->   
+        <section id="sobre-mi" class="container text-justify d-none d-lg-block">
+            <div class="d-md-block">
+                <div class="col-12">
+                    <h3 class="text-center font-weight-bold">PRESENTACION</h3>
+                    <hr>
+                </div>
+                <div class="row my-5">
+                    <div class="col-6">
+                        <p class="">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis ante nulla. Donec in neque consectetur, ultrices justo eu, hendrerit lectus. Nullam fermentum turpis et dolor euismod consequat sed sed ante. Curabitur vel lacinia nisi. Sed mollis condimentum rhoncus. Proin sed diam eu risus auctor aliquet. Sed nisi lorem, mollis sit amet gravida in, finibus ut diam. Nunc cursus lacus ex, id interdum nibh tristique ac. Maecenas in mi blandit, euismod ipsum eu, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem eu massa pellentesque, id interdum nibh luctus. Nam ac orci id neque posuere aliquam.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <p class="font-weight-normal">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis ante nulla. Donec in neque consectetur, ultrices justo eu, hendrerit lectus. Nullam fermentum turpis et dolor euismod consequat sed sed ante. Curabitur vel lacinia nisi. Sed mollis condimentum rhoncus. Proin sed diam eu risus auctor aliquet. Sed nisi lorem, mollis sit amet gravida in, finibus ut diam. Nunc cursus lacus ex, id interdum nibh tristique ac. Maecenas in mi blandit, euismod ipsum eu, lobortis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris ultricies sem eu massa pellentesque, id interdum nibh luctus. Nam ac orci id neque posuere aliquam.
+                        </p>
+                    </div>
+                </div> 
             </div>
-          </div>
-          <div class="card col-md-4">
-            <img src="./assets/img/iguana_page.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Iguana Page</h5>
-              <p class="card-text font-weight-normal">This card has supporting text below as a natural lead-in to additional content.</p>
+        </section>
+        <!--Seccion de mi experiencía-->
+        <section id="exp" class="container my-5">
+            <div class="col-12 text-center">
+                <h3 class="font-weight-bold">MI EXPERIENCIA</h3>
+                <hr>
             </div>
-          </div>
-          <div class="card col-md-4">
-            <img src="./assets/img/suricata.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Suricata</h5>
-              <p class="card-text font-weight-normal">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <div class="row">
+                <div class="col-6">
+                    <img src="./assets/img/winpack.png" alt="" class="rounded mx-auto d-none d-lg-block" data-toggle="tooltip" data-placement="top" title="Empresa con mas de 15 años en el mercado, tiempo en el cual nos hemos convertido en líderes en la entrega de elementos de embalaje, principalmente en la fabricación de Film Stretch.">
+                    <p class="text-justify font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nostrum nihil maxime consequatur, excepturi nemo iste facilis repellat consequuntur deserunt accusantium repudiandae rem quam accusamus, ut minima voluptatem est ipsa.</p>
+                </div>
+                <div class="col-6">
+                    <img src="./assets/img/ARTECOLA.png" alt="" class="rounded mx-auto d-none d-lg-block" data-toggle="tooltip" title="Artecola Química es hoy una de las más innovadoras empresas productoras de adhesivos industriales, laminados especiales y suministros para calzados de América Latina." data-placement="right" data-content="">
+                    <p class="text-justify font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat explicabo laudantium id ullam cupiditate vel asperiores nobis voluptas accusamus, officiis pariatur similique consectetur assumenda est, velit itaque sint voluptatem hic!</p>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="card-deck row my-2">
-          <div class="card col-md-4">
-            <img src="./assets/img/cuppon.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Cuppon</h5>
-              <p class="card-text font-weight-normal">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </section>
+        <!--Seccion de mis tarbajos como desarrollador-->
+        <section id="mis-trabajos" class="color-fondo p-5 text-white">
+            <div class="text-center">
+                <h1 class="font-weight-bold">MIS ÚLTIMOS TRABAJOS</h1>
+                <hr style="color: white; width: 100px;">
             </div>
-          </div>
-          <div class="card col-md-4">
-            <img src="./assets/img/ricomida.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Ricomida</h5>
-              <p class="card-text font-weight-normal">This card has supporting text below as a natural lead-in to additional content.</p>
+            <div class="container text-dark ">
+                <div class="card-deck row">
+                    <div class="card col-md-4">
+                        <img src="./assets/img/meet_coffee.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Meet&Coffe</h5>
+                            <p class="card-text font-weight-normal">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="./assets/img/iguana_page.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Iguana Page</h5>
+                            <p class="card-text font-weight-normal">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="./assets/img/suricata.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Suricata</h5>
+                            <p class="card-text font-weight-normal">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck row my-2">
+                    <div class="card col-md-4">
+                        <img src="./assets/img/cuppon.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuppon</h5>
+                            <p class="card-text font-weight-normal">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="./assets/img/ricomida.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ricomida</h5>
+                            <p class="card-text font-weight-normal">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                    <div class="card col-md-4">
+                        <img src="./assets/img/dmark.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">DMark</h5>
+                            <p class="card-text font-weight-normal">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="card col-md-4">
-            <img src="./assets/img/dmark.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">DMark</h5>
-              <p class="card-text font-weight-normal">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </section>
+        <!--TypeForm-->
+        <section id="contacto">
+            <div>
+                <h1 class="font-weight-bold text-center my-3">CONTACTO</h1>
+                <hr style="color: black">
             </div>
-          </div>
-        </div>
-        </div>
-    </section>
-    <!--TypeForm-->
-    <section id="contacto">
-       <div>
-           <h1 class="font-weight-bold text-center my-3">CONTACTO</h1>
-           <hr style="color: black">
-       </div>
-        <div class="typeform-widget" data-url="https://nicolas833191.typeform.com/to/g6cpzv" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=g6cpzv&utm_source=typeform.com-14763798-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=ES" style="color: #999" target="_blank">Typeform</a> </div>
-    </section>
-    <footer class="color-fondo">
-    <div class="div1 container">
-       <div class="row p-5">
-        <div class="col-md-4 text-center text-white rounded mx-auto d-block">
-           <h1>NICOLAS</h1>
-        </div>
-        <div class="mx-5 rounded mx-auto d-block">
-           <a href="https://github.com/nicolascarrascocares"><i class="fab fa-github"></i></a> 
-           <a href="https://www.linkedin.com/in/nicolas-carrasco-cares-986070b9/"><i class="fab fa-linkedin"></i></a>
-           <a href="#"><i class="fab fa-twitter-square"></i></a>     
-           <a href="https://www.facebook.com/nicolas.carrascocares.12"><i class="fab fa-facebook-square"></i></a>  
-        </div>
-        </div>
-    </div>
-    </footer>
-    <!--JQuery-->
-      <!--jQuery 3.3.1 sin slim-->
-    <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!--Popper JS 1.14.3-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <!--Bootstrap JS 4.2.1-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-     <!--Mi scrip-->
-    <script src="./assets/js/script.js"></script>
-</body>
+            <div class="typeform-widget" data-url="https://nicolas833191.typeform.com/to/g6cpzv" style="width: 100%; height: 500px;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script> <div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;"> powered by <a href="https://admin.typeform.com/signup?utm_campaign=g6cpzv&utm_source=typeform.com-14763798-Free&utm_medium=typeform&utm_content=typeform-embedded-poweredbytypeform&utm_term=ES" style="color: #999" target="_blank">Typeform</a> </div>
+        </section>
+        <footer class="color-fondo">
+            <div class="div1 container">
+                <div class="row p-5">
+                    <div class="col-md-4 text-center text-white rounded mx-auto d-block">
+                        <h1>NICOLAS</h1>
+                    </div>
+                    <div class="mx-5 rounded mx-auto d-block">
+                        <a href="https://github.com/nicolascarrascocares"><i class="fab fa-github"></i></a> 
+                        <a href="https://www.linkedin.com/in/nicolas-carrasco-cares-986070b9/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>     
+                        <a href="https://www.facebook.com/nicolas.carrascocares.12"><i class="fab fa-facebook-square"></i></a>  
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--JQuery-->
+        <!--jQuery 3.3.1 sin slim-->
+        <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <!--Popper JS 1.14.3-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <!--Bootstrap JS 4.2.1-->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!--Mi scrip-->
+        <script src="./assets/js/script.js"></script>
+    </body>
 </html>
