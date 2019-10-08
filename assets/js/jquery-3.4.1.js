@@ -1,53 +1,53 @@
-/ *!
+/*!
  * jQuery JavaScript Library v3.4.1
  * https://jquery.com/
- * *
- * Incluye Sizzle.js
+ *
+ * Includes Sizzle.js
  * https://sizzlejs.com/
- * *
- * Copyright JS Foundation y otros contribuyentes
- * Publicado bajo la licencia MIT
+ *
+ * Copyright JS Foundation and other contributors
+ * Released under the MIT license
  * https://jquery.org/license
- * *
- * Fecha: 2019-05-01T21: 04Z
- * /
-(función (global, fábrica) {
+ *
+ * Date: 2019-05-01T21:04Z
+ */
+( function( global, factory ) {
 
-	"uso estricto";
+	"use strict";
 
-	if (typeof module === "object" && typeof module.exports === "object") {
+	if ( typeof module === "object" && typeof module.exports === "object" ) {
 
-		// Para entornos tipo CommonJS y CommonJS donde una `ventana` adecuada
-		// está presente, ejecuta la fábrica y obtén jQuery.
-		// Para entornos que no tienen una `ventana` con un` documento`
-		// (como Node.js), expone una fábrica como module.exports.
-		// Esto acentúa la necesidad de crear una verdadera `ventana`.
-		// por ejemplo, var jQuery = require ("jquery") (window);
-		// Vea el boleto # 14549 para más información.
-		module.exports = global.document?
-			fábrica (global, verdadera):
-			función (w) {
-				if (! w.document) {
-					lanzar un nuevo error ("jQuery requiere una ventana con un documento");
+		// For CommonJS and CommonJS-like environments where a proper `window`
+		// is present, execute the factory and get jQuery.
+		// For environments that do not have a `window` with a `document`
+		// (such as Node.js), expose a factory as module.exports.
+		// This accentuates the need for the creation of a real `window`.
+		// e.g. var jQuery = require("jquery")(window);
+		// See ticket #14549 for more info.
+		module.exports = global.document ?
+			factory( global, true ) :
+			function( w ) {
+				if ( !w.document ) {
+					throw new Error( "jQuery requires a window with a document" );
 				}
-				devolución de fábrica (w);
+				return factory( w );
 			};
-	} más {
-		fábrica (global);
+	} else {
+		factory( global );
 	}
 
-// Pase esto si la ventana aún no está definida
-}) (typeof window! == "undefined"? window: this, function (window, noGlobal) {
+// Pass this if window is not defined yet
+} )( typeof window !== "undefined" ? window : this, function( window, noGlobal ) {
 
-// Edge <= 12 - 13+, Firefox <= 18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
-// arroja excepciones cuando el código no estricto (por ejemplo, ASP.NET 4.5) accede al modo estricto
-// argumentos.callee.caller (trac-13335). Pero a partir de jQuery 3.0 (2016), el modo estricto debería ser común
-// suficiente para que todos esos intentos estén guardados en un bloque de prueba.
-"uso estricto";
+// Edge <= 12 - 13+, Firefox <=18 - 45+, IE 10 - 11, Safari 5.1 - 9+, iOS 6 - 9.1
+// throw exceptions when non-strict code (e.g., ASP.NET 4.5) accesses strict mode
+// arguments.callee.caller (trac-13335). But as of jQuery 3.0 (2016), strict mode should be common
+// enough that all such attempts are guarded in a try block.
+"use strict";
 
 var arr = [];
 
-documento var = window.document;
+var document = window.document;
 
 var getProto = Object.getPrototypeOf;
 
@@ -67,156 +67,156 @@ var hasOwn = class2type.hasOwnProperty;
 
 var fnToString = hasOwn.toString;
 
-var ObjectFunctionString = fnToString.call (Objeto);
+var ObjectFunctionString = fnToString.call( Object );
 
-soporte var = {};
+var support = {};
 
-var isFunction = function isFunction (obj) {
+var isFunction = function isFunction( obj ) {
 
-      // Soporte: Chrome <= 57, Firefox <= 52
-      // En algunos navegadores, typeof devuelve "function" para elementos HTML <object>
-      // (es decir, `typeof document.createElement (" objeto ") ===" función "`).
-      // No queremos clasificar * any * nodo DOM como una función.
-      return typeof obj === "function" && typeof obj.nodeType! == "número";
+      // Support: Chrome <=57, Firefox <=52
+      // In some browsers, typeof returns "function" for HTML <object> elements
+      // (i.e., `typeof document.createElement( "object" ) === "function"`).
+      // We don't want to classify *any* DOM node as a function.
+      return typeof obj === "function" && typeof obj.nodeType !== "number";
   };
 
 
-var isWindow = función isWindow (obj) {
-		return obj! = nulo && obj === obj.window;
+var isWindow = function isWindow( obj ) {
+		return obj != null && obj === obj.window;
 	};
 
 
 
 
-	var preserveScriptAttributes = {
-		tipo: verdadero,
-		src: verdadero
-		nonce: verdadero,
-		noModule: verdadero
+	var preservedScriptAttributes = {
+		type: true,
+		src: true,
+		nonce: true,
+		noModule: true
 	};
 
-	función DOMEval (código, nodo, doc) {
-		doc = doc || documento;
+	function DOMEval( code, node, doc ) {
+		doc = doc || document;
 
 		var i, val,
-			script = doc.createElement ("script");
+			script = doc.createElement( "script" );
 
-		script.text = código;
-		if (nodo) {
-			para (i en preserveScriptAttributes) {
+		script.text = code;
+		if ( node ) {
+			for ( i in preservedScriptAttributes ) {
 
-				// Soporte: Firefox 64+, Edge 18+
-				// Algunos navegadores no admiten la propiedad "nonce" en los scripts.
-				// Por otro lado, simplemente usando `getAttribute` no es suficiente como
-				// el atributo `nonce` se restablece a una cadena vacía siempre que
-				// se conecta al contexto de navegación.
-				// Ver https://github.com/whatwg/html/issues/2369
-				// Ver https://html.spec.whatwg.org/#nonce-attributes
-				// La verificación `node.getAttribute` se agregó por el bien de
-				// `jQuery.globalEval` para que pueda falsificar un nodo que no contiene
-				// a través de un objeto.
-				val = nodo [i] || node.getAttribute && node.getAttribute (i);
-				si (val) {
-					script.setAttribute (i, val);
+				// Support: Firefox 64+, Edge 18+
+				// Some browsers don't support the "nonce" property on scripts.
+				// On the other hand, just using `getAttribute` is not enough as
+				// the `nonce` attribute is reset to an empty string whenever it
+				// becomes browsing-context connected.
+				// See https://github.com/whatwg/html/issues/2369
+				// See https://html.spec.whatwg.org/#nonce-attributes
+				// The `node.getAttribute` check was added for the sake of
+				// `jQuery.globalEval` so that it can fake a nonce-containing node
+				// via an object.
+				val = node[ i ] || node.getAttribute && node.getAttribute( i );
+				if ( val ) {
+					script.setAttribute( i, val );
 				}
 			}
 		}
-		doc.head.appendChild (script) .parentNode.removeChild (script);
+		doc.head.appendChild( script ).parentNode.removeChild( script );
 	}
 
 
-función toType (obj) {
-	if (obj == nulo) {
-		volver obj + "";
+function toType( obj ) {
+	if ( obj == null ) {
+		return obj + "";
 	}
 
-	// Soporte: Android <= 2.3 solamente (regExp funcional)
-	return typeof obj === "objeto" || typeof obj === "función"?
-		class2type [toString.call (obj)] || "objeto":
+	// Support: Android <=2.3 only (functionish RegExp)
+	return typeof obj === "object" || typeof obj === "function" ?
+		class2type[ toString.call( obj ) ] || "object" :
 		typeof obj;
 }
-/ * Símbolo global * /
-// Definir este global en .eslintrc.json crearía un peligro de usar el global
-// sin protección en otro lugar, parece más seguro definir global solo para este módulo
+/* global Symbol */
+// Defining this global in .eslintrc.json would create a danger of using the global
+// unguarded in another place, it seems safer to define global only for this module
 
 
 
 var
 	version = "3.4.1",
 
-	// Definir una copia local de jQuery
-	jQuery = función (selector, contexto) {
+	// Define a local copy of jQuery
+	jQuery = function( selector, context ) {
 
-		// El objeto jQuery es en realidad solo el constructor init 'mejorado'
-		// Necesita init si se llama a jQuery (solo permita que se arroje un error si no está incluido)
-		return new jQuery.fn.init (selector, contexto);
+		// The jQuery object is actually just the init constructor 'enhanced'
+		// Need init if jQuery is called (just allow error to be thrown if not included)
+		return new jQuery.fn.init( selector, context );
 	},
 
-	// Soporte: Android <= 4.0 solamente
-	// Asegúrese de recortar BOM y NBSP
-	rtrim = / ^ [\ s \ uFEFF \ xA0] + | [\ s \ uFEFF \ xA0] + $ / g;
+	// Support: Android <=4.0 only
+	// Make sure we trim BOM and NBSP
+	rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
 
 jQuery.fn = jQuery.prototype = {
 
-	// La versión actual de jQuery en uso
-	jquery: versión,
+	// The current version of jQuery being used
+	jquery: version,
 
 	constructor: jQuery,
 
-	// La longitud predeterminada de un objeto jQuery es 0
-	longitud: 0,
+	// The default length of a jQuery object is 0
+	length: 0,
 
-	toArray: function () {
-		return slice.call (esto);
+	toArray: function() {
+		return slice.call( this );
 	},
 
-	// Obtener el enésimo elemento en el conjunto de elementos coincidentes O
-	// Obtener todo el conjunto de elementos coincidentes como una matriz limpia
-	get: function (num) {
+	// Get the Nth element in the matched element set OR
+	// Get the whole matched element set as a clean array
+	get: function( num ) {
 
-		// Devuelve todos los elementos en una matriz limpia
-		if (num == nulo) {
-			return slice.call (esto);
+		// Return all the elements in a clean array
+		if ( num == null ) {
+			return slice.call( this );
 		}
 
-		// Devuelve solo un elemento del conjunto
-		retorno num <0? this [num + this.length]: this [num];
+		// Return just the one element from the set
+		return num < 0 ? this[ num + this.length ] : this[ num ];
 	},
 
-	// Toma una matriz de elementos y empújala en la pila
-	// (devolviendo el nuevo conjunto de elementos coincidentes)
-	pushStack: function (elems) {
+	// Take an array of elements and push it onto the stack
+	// (returning the new matched element set)
+	pushStack: function( elems ) {
 
-		// Construye un nuevo conjunto de elementos coincidentes de jQuery
-		var ret = jQuery.merge (this.constructor (), elems);
+		// Build a new jQuery matched element set
+		var ret = jQuery.merge( this.constructor(), elems );
 
-		// Agrega el objeto antiguo a la pila (como referencia)
+		// Add the old object onto the stack (as a reference)
 		ret.prevObject = this;
 
-		// Devuelve el conjunto de elementos recién formado
-		volver ret;
+		// Return the newly-formed element set
+		return ret;
 	},
 
-	// Ejecuta una devolución de llamada para cada elemento en el conjunto coincidente.
-	cada: función (devolución de llamada) {
-		return jQuery.each (esto, devolución de llamada);
+	// Execute a callback for every element in the matched set.
+	each: function( callback ) {
+		return jQuery.each( this, callback );
 	},
 
-	mapa: función (devolución de llamada) {
-		devuelve this.pushStack (jQuery.map (this, function (elem, i) {
-			return callback.call (elem, i, elem);
-		}));
+	map: function( callback ) {
+		return this.pushStack( jQuery.map( this, function( elem, i ) {
+			return callback.call( elem, i, elem );
+		} ) );
 	},
 
-	slice: function () {
-		devuelve this.pushStack (slice.apply (esto, argumentos));
+	slice: function() {
+		return this.pushStack( slice.apply( this, arguments ) );
 	},
 
-	primero: function () {
-		devuelve this.eq (0);
+	first: function() {
+		return this.eq( 0 );
 	},
 
-	último: función () {
+	last: function() {
 		return this.eq( -1 );
 	},
 
