@@ -12,9 +12,10 @@ $(function(){
             });
         }
     });
-    $("h2").click(function(){
+    $("h2:first").click(function(){
         $(this).css("color","red")
     });
+    
     $('[data-toggle="tooltip"]').tooltip();
 });
 
